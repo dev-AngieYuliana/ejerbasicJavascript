@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let temperatura = prompt("Introduce la temperatura actual:");
+        temperatura = parseFloat(temperatura);
+        if (isNaN(temperatura)) {
+            console.log("Por favor, introduce un número válido.");
+        } else {
+            if (temperatura < 0) {
+                console.log("Hace mucho frío.");
+            } else if (temperatura >= 0 && temperatura <= 15) {
+                console.log("El clima está fresco.");
+            } else if (temperatura > 15 && temperatura <= 30) {
+                console.log("El clima está agradable.");
+            } else {
+                console.log("Hace mucho calor.");
+            }
+        }
+    </script>
+</body>
+</html>

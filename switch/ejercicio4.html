@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let combustible = prompt("Introduce el tipo de combustible (gasolina, diesel, electrico):").toLowerCase();
+        switch (combustible) {
+            case 'gasolina':
+                console.log("Has elegido gasolina.");
+                break;
+            case 'diesel':
+                console.log("Has elegido diesel.");
+                break;
+            case 'electrico':
+                console.log("Has elegido eléctrico.");
+                break;
+            default:
+                console.log("Tipo de combustible no reconocido.");
+                break;
+        }
+    </script>
+</body>
+</html>

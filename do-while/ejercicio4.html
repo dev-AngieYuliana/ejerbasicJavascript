@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor de Temperatura</title>
+</head>
+<body>
+    <script>
+        let temperatura;
+        do {
+            temperatura = parseFloat(prompt("Ingresa la temperatura actual en °C:"));
+            if (temperatura < 18 || temperatura > 25) {
+                alert("Temperatura fuera de rango. Por favor, ingresa una temperatura entre 18°C y 25°C.");
+            } 
+        } while (temperatura < 18 || temperatura > 25);
+
+        console.log("Temperatura aceptable: " + temperatura + "°C");
+        alert("Temperatura aceptable: " + temperatura + "°C. Gracias.");
+    </script>
+</body>
+</html>
+

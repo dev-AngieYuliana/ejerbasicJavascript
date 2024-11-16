@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero = prompt("Introduce un número:");
+        numero = parseFloat(numero);
+        if (isNaN(numero)) {
+            console.log("El valor ingresado no es un número.");
+        } else {
+            if (numero > 0) {
+                console.log("El número es positivo.");
+            } else if (numero < 0) {
+                console.log("El número es negativo.");
+            } else {
+                console.log("El número es cero.");
+            }
+        }
+    </script>
+</body>
+</html>

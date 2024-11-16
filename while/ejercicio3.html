@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let costoTotal = 0; 
+        let continuar = true; 
+
+        while (continuar) {
+            let precio = parseFloat(prompt("Introduce el precio del producto:"));
+
+            if (isNaN(precio) || precio <= 0) {
+                console.log("Precio no válido, por favor intenta de nuevo.");
+                continue; 
+            }
+
+            let cantidad = parseInt(prompt("Introduce la cantidad que deseas comprar:"));
+
+            if (isNaN(cantidad) || cantidad <= 0) {
+                console.log("Cantidad no válida, por favor intenta de nuevo.");
+                continue;
+            }
+            let costoProducto = precio * cantidad;
+            costoTotal += costoProducto;
+
+            console.log("Costo del producto: " + costoProducto + " (Precio: " + precio + ", Cantidad: " + cantidad + ")");
+            let respuesta = prompt("¿Deseas agregar otro producto? (si/no)").toLowerCase();
+            if (respuesta !== "si") {
+                continuar = false; 
+            }
+        }
+        console.log("El costo total de la compra es: " + costoTotal);
+    </script>
+</body>
+</html>

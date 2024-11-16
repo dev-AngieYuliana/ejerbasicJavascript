@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let limite = parseInt(prompt("Introduce un número límite: "));
+        let sumaPares = 0;
+        for (let i = 0; i <= limite; i++) {
+            if (i % 2 === 0) { 
+                sumaPares += i;
+            }
+        }
+        console.log("La suma de los números pares es: " + sumaPares);
+    </script>
+</body>
+</html>

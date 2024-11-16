@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero = parseInt(prompt("Introduce un número (0 para detener):"));
+        let suma = 0;
+
+        while (numero !== 0) {
+            suma += numero;
+            numero = parseInt(prompt("Introduce otro número (0 para detener):"));
+        }
+        console.log("La suma total es: " + suma);
+
+    </script>
+</body>
+</html>

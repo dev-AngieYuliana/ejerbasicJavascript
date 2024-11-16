@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let operacion = prompt("Introduce la operación que quieres realizar (sumar, restar, multiplicar, dividir):").toLowerCase();
+        let num1 = parseFloat(prompt("Introduce el primer número:"));
+        let num2 = parseFloat(prompt("Introduce el segundo número:"));
+        switch (operacion) {
+            case 'sumar':
+                console.log("El resultado es: " + (num1 + num2));
+                break;
+            case 'restar':
+                console.log("El resultado es: " + (num1 - num2));
+                break;
+            case 'multiplicar':
+                console.log("El resultado es: " + (num1 * num2));
+                break;
+            case 'dividir':
+                if (num2 === 0) {
+                    console.log("No se puede dividir entre 0");
+                } else {
+                    console.log("El resultado es: " + (num1 / num2));
+                }
+                break;
+            default:
+                console.log("Operación no válida");
+                break;
+        }
+    </script>
+</body>
+</html>

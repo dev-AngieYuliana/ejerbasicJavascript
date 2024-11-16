@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nombreCliente = " ";
+        nombreCliente = prompt("digite el nombre del cliente: ");
+        let edadClienteIni = prompt("digite la edad del cliente: ");
+
+        let edadCliente = parseInt(edadClienteIni);
+        if (isNaN(edadCliente)) {
+            console.log("Has ingresado un valor no numérico para la edad.");
+        }else{
+            if (edadCliente<18){
+            console.log("el cliente: "+nombreCliente + "es menor de edad");
+            }else{
+                console.log("el cliente: "+nombreCliente + "es mayor de edad");
+            };
+            
+            if (edadCliente<= 0){
+                console.log("la edad del cliente no existe.");
+            }else if(edadCliente>100){
+                console.log("la edad del cliente es superior de lo normal.");
+            }
+    }
+    </script>
+</body>
+</html>

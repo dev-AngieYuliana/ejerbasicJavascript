@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Comidas Rápidas</title>
+</head>
+<body>
+    <script>
+        const menu = {
+            1: { nombre: "Hamburguesa", precio: 5.00 },
+            2: { nombre: "Papas fritas", precio: 2.50 },
+            3: { nombre: "Refresco", precio: 1.50 },
+            4: { nombre: "Pizza", precio: 8.00 },
+            5: { nombre: "Ensalada", precio: 4.00 }
+        };
+
+        let costoTotal = 0;
+        let continuar; 
+
+        do {
+            console.log("Menú de Comidas Rápidas:");
+            for (const key in menu) {
+                console.log(key + ": " + menu[key].nombre + " - $" + menu[key].precio);
+            }
+            let eleccion = parseInt(prompt("Elige un número del menú para realizar un pedido (1-5):"));
+            if (menu[eleccion]) {
+                costoTotal += menu[eleccion].precio;
+                console.log("Has pedido: " + menu[eleccion].nombre + " por $" + menu[eleccion].precio);
+            } else {
+                console.log("Opción no válida. Por favor, elige un número del menú.");
+            }
+            continuar = prompt("¿Deseas realizar otro pedido? (si/no)").toLowerCase();
+        } while (continuar === "si");
+        console.log("El costo total de tus pedidos es: $" + costoTotal.toFixed(2));
+        console.log("¡Gracias por tu pedido! ¡Que disfrutes tu comida!");
+    </script>
+</body>
+</html>

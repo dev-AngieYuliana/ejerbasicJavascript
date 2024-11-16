@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let capacidadPapel = 100; 
+        let continuar = true; 
+
+        while (continuar && capacidadPapel > 0) {
+            console.log("Papel restante en la impresora: " + capacidadPapel + " páginas");
+
+            let paginas = parseInt(prompt("¿Cuántas páginas deseas imprimir?"));
+
+            if (isNaN(paginas) || paginas <= 0) {
+                console.log("Cantidad no válida, por favor intenta de nuevo.");
+                continue;
+            }
+            if (paginas > capacidadPapel) {
+                console.log("No hay suficiente papel. Solo quedan " + capacidadPapel + " páginas disponibles.");
+            } else {
+                capacidadPapel -= paginas;
+                console.log("Imprimiendo " + paginas + " páginas...");
+                console.log("Páginas impresas. Papel restante: " + capacidadPapel + " páginas.");
+            }
+
+            let respuesta = prompt("¿Deseas imprimir más páginas? (si/no)").toLowerCase();
+            if (respuesta !== "si") {
+                continuar = false; 
+            }
+        }
+        if (capacidadPapel <= 0) {
+            console.log("No hay más papel en la impresora.");
+        }
+        console.log("Gracias por utilizar la impresora.");
+    </script>
+</body>
+</html>
